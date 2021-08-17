@@ -14,6 +14,8 @@
 # [START cloudbuild_go_yaml]
 # [START cloudbuild_go_test_yaml]
 steps:
+  - name: test
+    args: ['echo', 'helloworld']
   # Run tests and save to file
   - name: golang
     entrypoint: /bin/bash
