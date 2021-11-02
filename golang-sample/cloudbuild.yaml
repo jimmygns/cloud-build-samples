@@ -23,5 +23,7 @@ steps:
         go get -u github.com/jstemmer/go-junit-report
         2>&1 go test -timeout 1m -v ./... | tee sponge.log
         /go/bin/go-junit-report -set-exit-code < sponge.log > ${SHORT_SHA}_test_log.xml
+substitutions:
+  _TESTVAR: "test"
   # [END cloudbuild_go_test_yaml]
 # [END cloudbuild_go_yaml]
